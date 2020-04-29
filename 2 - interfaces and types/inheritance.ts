@@ -16,7 +16,8 @@ let obj: ThreeDimensionalPoint = {
 let twoD = obj as TwoDimensionalPoint;
 let threeD = twoD as ThreeDimensionalPoint;
 
-let num = threeD as number;
+
+let num = threeD as number; // Compiler error, since threeD is a ThreeDimensionalPoint, which isn't a number and doesn't have the same properties as the number type
 let notReallyANumber = (threeD as unknown) as number; // HACKY EVIL WITCHCRAFT
 
 export {};

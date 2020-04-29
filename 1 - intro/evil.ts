@@ -2,12 +2,11 @@ let val: any = 5; // EVIL
 val = "this is a string";
 
 let num = val as number;
-num.toString();
+num.toFixed(2);
 
 /*
 
-Compiler: This is fine.
-Runtime:
+Compiler:
 
 mddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddhddhhdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddmo
 Mmoo+oooooooooooooooooooooosooooooooooooooooooooooooooooooooooooooooooo+o+oo+/++++++o++ooo++oss+++oooo+ooooooooooooooooooooooooooooooooooo+oooooooooo++oo++++++++++//++++++/+ms

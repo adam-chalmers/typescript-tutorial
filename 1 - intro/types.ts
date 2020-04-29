@@ -1,5 +1,9 @@
 import moment from "moment";
 
+let num: number = 1;
+let str: string = "string";
+let arr: number[] = [1, 2, 3];
+
 interface Types {
     num: number;
     str: string;
@@ -16,10 +20,10 @@ let types: Types = {
     method: (arg) => parseInt(arg)
 };
 
-types.method = parse;
-
 function parse(arg: string) {
     return parseInt(arg);
 }
+
+types.method = parse;
 
 export {};

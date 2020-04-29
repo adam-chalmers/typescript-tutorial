@@ -39,12 +39,12 @@ let required: Required<Partial<SeveralProperties>> = {
 let exclude: Exclude<number | string | boolean, string> = 1;
 
 let omitted: Omit<SeveralProperties, "one"> = { two: "two", three: true };
-// omitted.one = 1; // Error since omitted is a type that has excluded the "one" property
+omitted.one = 1; // Error since omitted is a type that has excluded the "one" property
 
 // Can't have property "two" here since it's not been picked
 let picked: Pick<SeveralProperties, "one" | "three"> = {
     one: 1,
-    // two: "two", // This is an error
+    two: "two", // This is an error
     three: true
 };
 

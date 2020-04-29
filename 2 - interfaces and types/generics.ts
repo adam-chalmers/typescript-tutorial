@@ -22,7 +22,7 @@ let stringArray = makeArray<string>("string!"); // ["string!"]
 let boolArray = makeArray(true); // [true]
 
 let promise: Promise<string> = new Promise<string>((resolve, reject) => {
-    // resolve(1); // Error, since we're using the generic promise, resolve can only take a string!
+    resolve(1); // Error, since we're using the generic promise, resolve can only take a string!
     resolve("This is a string.");
 });
 
