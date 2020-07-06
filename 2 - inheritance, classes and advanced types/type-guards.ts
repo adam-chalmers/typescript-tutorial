@@ -1,12 +1,6 @@
 function isString(val: any): val is string {
-    return typeof val === "string";
-}
-
-function uglierIsString(val: any): val is string {
-    // Here we treat val as a string (even though it might not be) and check for the existence of a "concat" method. This test will pass if val is a string,
-    // but can also pass for any old object that we pass in that has a truthy value with the property name "concat". This method is often required for non-primitive types
-    // since typeof can only really be used with primitive types.
-    return (val as string).concat ? true : false;
+    let type = typeof val;
+    return type === "string";
 }
 
 function returnFirst(first: number, second: string, condition: boolean) {
@@ -30,6 +24,13 @@ else {
     // val here can't be a string, so the only other option is that val is a number, so we can do number-only things here!
     val.toString();
     val = val + 4;
+}
+
+function uglierIsString(val: any): val is string {
+    // Here we treat val as a string (even though it might not be) and check for the existence of a "concat" method. This test will pass if val is a string,
+    // but can also pass for any old object that we pass in that has a truthy value with the property name "concat". This method is often required for non-primitive types
+    // since typeof can only really be used with primitive types.
+    return (val as string).concat ? true : false;
 }
 
 export {};
