@@ -56,4 +56,11 @@ function doTheRightThing<T extends { val: number[] }>(res: Restricted<T>) { // N
     res.prop.val.push(1);
 }
 
+function log<T>(obj: T) {
+    console.log(obj);
+}
+log("string");
+log(1);
+log({ prop: "value" });
+
 export {};

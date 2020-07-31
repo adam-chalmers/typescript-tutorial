@@ -1,10 +1,10 @@
-// Disclaimer: this is terrible and doesn't work in any way, but shows a simple recursive type combined with generics
 type LinkedElement<T> = {
     value: T,
     previous?: LinkedElement<T>,
     next?: LinkedElement<T>
 }
 
+// Disclaimer: this is a quick demonstration and probably isn't functional
 let list: LinkedElement<string> = { value: "first" };
 
 function addElement(val: string) {
